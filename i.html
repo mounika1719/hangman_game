@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    <title>Hangman Game</title>
+    <link rel="styleheet" href="style.css">
+    </head>
+    <body>
+        <h1>Hangman</h1>
+        <div class="game">
+            <svg height="250" width="200" class="fig">
+                <line x1="60" y1="20" x2="140" y2="20"/>
+                <line x1="60" y1="20" x2="60" y2="300"/>
+                <line x1="140" y1="60" x2="140" y2="20"/>
+                <line x1="20" y1="248" x2="110" y2="248"/>
+                <!--head-->
+                <circle cx="140" cy="80" r="20" class="fig-part"/>
+                  <!--eyes-->
+                  <line x1="130" y1="75" x2="130" y2="75" class="fig-part"/>
+                  <line x1="150" y1="75" x2="150" y2="75" class="fig-part"/>
+                <!--body-->
+                <line x1="140" y1="100" x2="140" y2="190" class="fig-part"/>
+                <!--arms-->
+                <line x1="140" y1="100" x2="110" y2="138" class="fig-part"/>
+                <line x1="140" y1="100" x2="170" y2="138" class="fig-part"/>
+                <!--legs-->
+                <line x1="138" y1="150" x2="105" y2="190" class="fig-part"/>
+                <line x1="170" y1="190" x2="140" y2="150" class="fig-part"/>
+            </svg>
+            <div class="wrong-letters">
+                <div id="wrong-l">
+                    <p>Wrong letters</p>
+                    <span><u>h j j h b g j </u></span>
+                </div>
+            </div>
+            <div class="word" id="word">
+             <div class="letters">s</div>
+             <div class="letters">s</div>
+             <div class="letters">s</div>
+            </div>
+             <div class="popup_container" id="pop_up_msg">
+               <div class="popup">
+                   <h3 id="finalmsg">
+                    Congrats!!! You have won
+                   </h3>
+                   <button id="playbutton" class="popupbutton">
+                       Play Again :)
+                   </button>
+               </div>
+             </div> </div>
+        <div class="notification" id="notify">
+            <p>You have already entered this letter :-)</p>
+        </div>       
+        <script src="scrit.js"></script>
+    </body>
+
+</html>

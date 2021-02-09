@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0),
+     rgb(0, 255, 213));
+    color:rgba(198, 255, 43, 0.986);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+    animation: a 15s infinite;
+    font: 2em serif;
+}
+@keyframes a{
+    20%{color: rgba(0, 0, 255, 0.993);}
+    29%{color: rgb(255, 238, 0);}
+    35%{color:purple;}
+    45%{color: rgba(255, 192, 203, 0.973);}
+    
+
+}
+.game{
+    position: relative;
+    margin: auto;
+    color: black;
+}
+.fig{
+    fill: transparent;
+    stroke: black;
+     stroke-width: 7px;
+     stroke-linecap: round;
+}
+.fig-part{
+    display: none;
+}
+.wrong-letters{
+    position: absolute;
+    top:20px;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: blue;
+}
+.word{
+    position: absolute;
+    display: flex;
+    bottom: -90px;
+    left: 30%;
+    transform: translate(-50%);
+}
+.letters{
+    border-bottom: 3px solid rgba(0, 0, 255, 0.822);
+    display: inline-flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content:center;
+    margin: 0 4px;
+    height: 50px;
+    width: 20px;
+
+}
+.popup_container{
+    position:fixed;
+    top: 100;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    background :blue;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1); 
+    padding: 20px;
+    text-align: center;
+     color: white;
+}
+.popupbutton{
+    cursor: pointer;
+    background-color: #fff;
+    color: blue;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+
+}
+.popupbutton:active{
+    transform: scale(0.98);
+}
+.popupbutton:focus{
+    outline: 0;
+}
+.notification{
+    background-color:rgba(0,0,0,0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px ;
+    position: absolute;
+    bottom: -10px;
+    transition: transform 0.3s ease-in-out;
+    color:rgb(35, 56, 241);
+}
+.notification p{
+    margin: 0;
+    
+}
+.notification.show{
+    transform: translateY(-50px);
+}
