@@ -7,7 +7,9 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words=['application',
+const words=['mother',
+'father',
+'newyork',
 'programming',
 'interface','donkey',
 'computer',
